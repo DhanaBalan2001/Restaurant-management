@@ -37,7 +37,7 @@ initSocket(server);
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || '',
+  origin: process.env.CLIENT_URL || 'https://restaurant-management-dhanabalan.netlify.app',
   credentials: true
 }));
 app.use(express.json());
