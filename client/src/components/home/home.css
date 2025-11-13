@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/restaurant-bg.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #e31837;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c41230;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+}

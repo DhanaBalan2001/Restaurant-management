@@ -1,0 +1,229 @@
+.checkout-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+  
+  .checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .checkout-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+  }
+  
+  .checkout-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+  }
+  
+  .checkout-content {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .checkout-form-container {
+    flex: 1;
+  }
+  
+  .checkout-form h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .payment-methods {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .payment-method {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .payment-method input {
+    margin-right: 0.5rem;
+    width: auto;
+  }
+  
+  .place-order-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .place-order-btn:hover:not(:disabled) {
+    background-color: #c0392b;
+  }
+  
+  .place-order-btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  .order-summary {
+    width: 350px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .order-summary h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+  
+  .order-items {
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .order-item:last-child {
+    border-bottom: none;
+  }
+  
+  .order-item-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-item-quantity {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .order-item-name {
+    flex: 1;
+  }
+  
+  .order-item-price {
+    font-weight: 600;
+  }
+  
+  .order-item-customizations {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    padding-left: 1.5rem;
+  }
+  
+  .order-customization {
+    margin-bottom: 0.25rem;
+  }
+  
+  .order-totals {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+  
+  .order-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-total-row.grand-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #ddd;
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 992px) {
+    .checkout-content {
+      flex-direction: column;
+    }
+    
+    .order-summary {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .checkout-page {
+      padding: 1rem;
+    }
+    
+    .checkout-content {
+      padding: 1rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  

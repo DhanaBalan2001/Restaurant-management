@@ -1,0 +1,73 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding-right: 4rem;
+}
+
+/* Add margin to the body to prevent content from hiding under navbar */
+body {
+  margin-top: 80px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin: 0 1rem;
+}
+
+nav a:hover {
+  color: #e31837;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e31837;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #333;
+  color: #e31837;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+button:hover {
+  background: #e31837;
+  color: #fff;
+  border-color: #e31837;
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  /* Adjust body margin for mobile view */
+  body {
+      margin-top: 150px;
+  }
+
+  nav a {
+      margin: 0.5rem 0;
+  }
+
+  button {
+      margin: 0.5rem 0;
+  }
+}
