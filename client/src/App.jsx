@@ -14,7 +14,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import MenuPage from './pages/menu/MenuPage';
-import CheckoutPage from './pages/checkout/CheckoutPage';
+import CheckoutPage from './pages/checkout/CheckOutPage';
 import OrderConfirmationPage from './pages/checkout/OrderConfirmationPage';
 import OrdersPage from './pages/orders/OrdersPage';
 import OrderDetailPage from './pages/orders/OrderDetailPage';
