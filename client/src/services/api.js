@@ -2,9 +2,7 @@ import axios from 'axios';
 
 // Update this to use environment variables or detect environment
 const api = axios.create({
-  baseURL: import.meta.env.PROD 
-    ? 'https://restaurant-management-backend-5s96.onrender.com/api'
-    : 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
   headers: {
     'Content-Type': 'application/json',
   },
