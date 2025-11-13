@@ -24,6 +24,7 @@ const RegisterForm = () => {
     },
     validationSchema: registerSchema,
     onSubmit: async (values) => {
+      if (isLoading) return; 
       setIsLoading(true);
       try {
         const response = await register(values);
