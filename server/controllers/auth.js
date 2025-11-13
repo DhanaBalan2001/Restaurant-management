@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 
 export const register = async (req, res) => {
   try {
-    const { username, password, role, email, phone, address } = req.body;
+    const { username, password, role, email, phone } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     
     const user = await User.create({
@@ -12,13 +12,12 @@ export const register = async (req, res) => {
       password: hashedPassword,
       role: role || 'customer',
       email,
-      phone,
-      address
+      phoneNumber: phone
     });
 
     const token = jwt.sign(
       { userId: user._id, role: user.role },
-      process.env.JWT,
+      process.env.JWT || 'fallback-secret-key',
       { expiresIn: '24h' }
     );
 
@@ -50,7 +49,7 @@ export const login = async (req, res) => {
     
     const token = jwt.sign(
       { userId: user._id, role: user.role },
-      process.env.JWT,
+      process.env.JWT || 'fallback-secret-key',
       { expiresIn: '1d' }
     );
     
@@ -73,7 +72,7 @@ export const verifyRole = (allowedRoles) => {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) return res.status(401).json({ message: "No token provided" });
 
-    jwt.verify(token, process.env.JWT, (err, decoded) => { 
+    jwt.verify(token, process.env.JWT || 'fallback-secret-key', (err, decoded) => { 
       if (err) return res.status(403).json({ message: "Invalid token" });
       if (!allowedRoles.includes(decoded.role)) {
         return res.status(403).json({ message: "Insufficient permissions" });
