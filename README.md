@@ -293,6 +293,6 @@ For support, email support@finedine.com or join our Slack channel.
 
 **⭐ Star this repository if you found it helpful! ⭐**
 
-Made with ❤️ by [Dhanabalan](https://github.com/yourusername)
+Made with ❤️ by [DhanaBalan](https://github.com/DhanaBalan2001)
 
 </div>
